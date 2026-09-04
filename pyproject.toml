@@ -1,0 +1,30 @@
+[project]
+name = "fast-api-service"
+version = "1.0.0"
+description = "Production-style multi-agent LLM orchestration API built with FastAPI."
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+# E501: line length handled by black.
+# B008: FastAPI's `Depends()`/`Security()`-as-default-argument is the
+# documented, idiomatic dependency-injection pattern, not a real bug.
+ignore = ["E501", "B008"]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.mypy]
+python_version = "3.12"
+disallow_untyped_defs = true
+ignore_missing_imports = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
