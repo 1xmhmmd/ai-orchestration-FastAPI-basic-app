@@ -36,9 +36,9 @@ Most "LLM API" side-projects are a single endpoint that forwards a prompt to Ope
 
 | Discipline | What's implemented |
 |---|---|
-| 🏗️ **Software engineering** | Layered architecture (`api` → `agents` → `services` → `core`), dependency injection, Pydantic v2 schemas, structured JSON logs with request-correlation IDs, centralized error handling, fully async, fully typed, pytest suite with mocked LLM calls, GitHub Actions CI (lint + type-check + test + Docker build) |
-| 🔒 **Security engineering** | API-key auth with constant-time comparison, per-key rate limiting (Redis-backed), strict input validation as a first line of defense against prompt injection and cost abuse, security response headers (HSTS, X-Frame-Options, etc.), zero secrets in code, generic error responses that never leak internals, non-root Docker user |
-| 🧠 **AI engineering** | Clean `BaseAgent` abstraction for a multi-agent pipeline, async LLM client with exponential-backoff retry and timeouts, per-step token-usage tracking, response caching to cut redundant LLM spend, configurable agent subsets and step limits |
+| **Software engineering** | Layered architecture (`api` → `agents` → `services` → `core`), dependency injection, Pydantic v2 schemas, structured JSON logs with request-correlation IDs, centralized error handling, fully async, fully typed, pytest suite with mocked LLM calls, GitHub Actions CI (lint + type-check + test + Docker build) |
+| **Security engineering** | API-key auth with constant-time comparison, per-key rate limiting (Redis-backed), strict input validation as a first line of defense against prompt injection and cost abuse, security response headers (HSTS, X-Frame-Options, etc.), zero secrets in code, generic error responses that never leak internals, non-root Docker user |
+| **AI engineering** | Clean `BaseAgent` abstraction for a multi-agent pipeline, async LLM client with exponential-backoff retry and timeouts, per-step token-usage tracking, response caching to cut redundant LLM spend, configurable agent subsets and step limits |
 
 ## Architecture
 
