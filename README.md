@@ -1,6 +1,4 @@
-<div align="center">
-
-# 🤖 Multi-Agent Orchestration API
+## Multi-Agent Orchestration API
 
 **A production-grade FastAPI service that orchestrates a pipeline of LLM agents — built to demonstrate software engineering, security engineering, and AI engineering practices together.**
 
